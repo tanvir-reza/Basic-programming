@@ -1,0 +1,25 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+
+class timer{
+    clock_t start;
+    public:
+    timer();
+    ~timer();
+};
+timer::timer(){
+    start = clock();
+}
+timer::~timer(){
+    clock_t end;
+    end = clock();
+    cout<<"Pased Time : "<<(end-start)/CLOCKS_PER_SEC<<endl;
+}
+int main(){
+    timer t;
+    string name;
+    cout<<"Enter Your Name : ";
+    getline(cin,name);
+    cout<<"Your Name Is : "<<name;
+}
