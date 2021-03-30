@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class myclass{
+    public:
+    int a;
+    myclass();
+    ~myclass();
+    void show();
+};
+myclass::myclass()
+{
+    cout<<"Constructor Called "<<endl;
+    a=10;
+
+}
+myclass::~myclass()
+{
+    cout<<"Destructor Called "<<endl;
+    a=0;
+
+}
+void myclass::show(){
+    cout<<"The value of A is : "<<a<<endl;
+}
+
+int main(){
+    myclass t;
+    t.show();
+}
