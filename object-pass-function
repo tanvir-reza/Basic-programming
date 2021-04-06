@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+class myclass
+{
+	int a;
+	public:
+	myclass(int x){a=x;}
+	int get_a(){return a;}
+};
+
+int sqrt_it(myclass o){
+	return o.get_a()*o.get_a();
+}
+
+int main(){
+	myclass m(10),n(30);
+	cout<<sqrt_it(m);
+	cout<<sqrt_it(n);
+}
